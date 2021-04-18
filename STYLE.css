@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
-*{
+* {
     font-family: 'Poppins';
     margin: 0;
     padding: 0;
 }
 
 .barra{
-    background-color: rgba(32, 32, 32, .7);
+    position: absolute;
+    background-color: rgba(20, 26, 27, 0.7);
     height: 100vh;
     width: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    float: left;
+
+    /* backdrop-filter: brightness(.8) blur(30px); */
 }
 
 .barra li, input{
@@ -29,9 +30,17 @@
 }
 
 body {
-    background-image: url("Image-Background.jpg");
+    /* background-image: url("Image-Background.jpg"); */
     background-size: cover;
     backdrop-filter: brightness(.8);
+}
+
+img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
 }
 
 .barra h2{
@@ -51,7 +60,7 @@ li:hover {
     cursor: pointer;
 }
 
-.pesquisa-container { 
+.pesquisa-container {
     width: auto;
     height: 100vh;
     display: flex;
@@ -94,11 +103,26 @@ li:hover {
 }
 
 .excluindo {
-    animation: excluir .22s ease-in; 
+    animation: excluir .22s ease-in;
 }
 .adicionando {
-    animation: adicionar .18s ease-out; 
+    animation: adicionar .18s ease-out;
 }
+
+input,
+li {
+    transition: .15s ease-out;
+    position: relative;
+    box-shadow: 0 0 0 rgba(0,0,0,0.16), 0 0 0 rgba(0,0,0,0.23);
+}
+
+input:hover,
+input:focus,
+li:hover {
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
 
 @keyframes adicionar {
     from {

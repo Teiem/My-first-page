@@ -2,15 +2,34 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="stylesheet" href="STYLE.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Home</title>
+
+    <link rel="stylesheet" href="STYLE.css">
+    <script src="SCRIPT.js" async defer></script>
 </head>
 
 <body>
+    <!-- <img
+        srcset="images/space-minimal-art-4k-qy@1080.avif 1920w,
+                images/space-minimal-art-4k-qy@1440.avif 2560w,
+                images/space-minimal-art-4k-qy@2160.avif 3840w"
+        src="images/space-minimal-art-4k-qy.jpg"
+        width="100vw"
+        height="100vh"></img> -->
+
+    <picture>
+        <source type="image/avif" srcset="images/space-minimal-art-4k-qy@1080.avif 1920w,
+        images/space-minimal-art-4k-qy@1440.avif 2560w,
+        images/space-minimal-art-4k-qy@2160.avif 3840w">
+
+        <img src="images/space-minimal-art-4k-qy.jpg">
+    </picture>
+
+
 
     <div class="barra">
         <h2>Tarefas</h2>
@@ -31,6 +50,4 @@
         <input type="text" placeholder="Pesquisar" class="pesquisar" id="pesquisar">
     </div>
 </body>
-<script src="SCRIPT.js"></script>
-
 </html>
